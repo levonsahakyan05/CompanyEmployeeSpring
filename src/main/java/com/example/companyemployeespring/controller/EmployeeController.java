@@ -28,7 +28,7 @@ public class EmployeeController {
     @Autowired
     private CompanyRepository companyRepository;
 
-    @Value("${company.employee.spring.images.folder}")
+    @Value("${company.employee.images.folder}")
     private String folderPath;
 
     @GetMapping("/employees/add")
