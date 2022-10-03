@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Main Page</title>
@@ -8,5 +8,12 @@
 <h1>Company and Employee</h1>
 <a href="/companies">Companies</a>
 <a href="/employees">Employees</a>
+<a href="/register">Register</a>
+<th:block th:if="${currentUser != null}">
+    <a href="/logout" style="float: right">LogOut</a>
+</th:block>
+<th:block th:if="${currentUser == null}">
+    <a href="/loginPage" style="float: right"> Login</a>
+</th:block>
 </body>
 </html>

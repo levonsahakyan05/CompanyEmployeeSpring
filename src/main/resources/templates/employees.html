@@ -37,5 +37,8 @@
   </tr>
 </table>
 <a th:href="@{/employees/add}">Add</a>
+<th:block th:if="${currentUser != null}">
+  <a href="/logout" style="float: right">LogOut</a>
+</th:block>
 </body>
 </html>
